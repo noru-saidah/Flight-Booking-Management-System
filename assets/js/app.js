@@ -17,12 +17,12 @@ const STORAGE_KEY = "flyMeBookings";
 // SAMPLE BOOKING DATA: Edit these objects to change the example reservations.
 
 const sampleBookings = [
- {id:"VW-1001",name:"Safia Amalin",email:"aisha.rahman@example.com",flight:"VW204",route:"KUL → SIN",departure:"2026-12-04",travelClass:"Economy",amount:289,status:"Confirmed"},
- {id:"VW-1002",name:"Izwan Hakimi",email:"daniel.lim@example.com",flight:"VW318",route:"KUL → BKK",departure:"2026-12-06",travelClass:"Business",amount:860,status:"Pending"},
- {id:"VW-1003",name:"Faiz Iskandar",email:"nur.iman@example.com",flight:"VW410",route:"PEN → KUL",departure:"2026-12-09",travelClass:"Economy",amount:155,status:"Confirmed"},
- {id:"VW-1004",name:"Amer Faiz",email:"harith.zain@example.com",flight:"VW522",route:"KUL → DPS",departure:"2026-12-12",travelClass:"First",amount:1490,status:"Cancelled"},
- {id:"VW-1005",name:"Rifa Basheerah",email:"mei.chen@example.com",flight:"VW204",route:"KUL → SIN",departure:"2026-12-15",travelClass:"Economy",amount:289,status:"Pending"},
- {id:"VW-1006",name:"Nuriyah Aziz",email:"sofia.ahmad@example.com",flight:"VW701",route:"KUL → LHR",departure:"2026-12-18",travelClass:"Business",amount:4250,status:"Confirmed"}
+ {id:"VW-1001",name:"Safia Amalin",email:"sfamalin.rahman@gmail.com",flight:"VW204",route:"KUL → SIN",departure:"2026-12-04",travelClass:"Economy",amount:289,status:"Confirmed"},
+ {id:"VW-1002",name:"Izwan Hakimi",email:"izwanhakimi5@gmail.com",flight:"VW318",route:"KUL → BKK",departure:"2026-12-06",travelClass:"Business",amount:860,status:"Pending"},
+ {id:"VW-1003",name:"Faiz Iskandar",email:"faiziskndr@gmail.com",flight:"VW410",route:"PEN → KUL",departure:"2026-12-09",travelClass:"Economy",amount:155,status:"Confirmed"},
+ {id:"VW-1004",name:"Amer Faiz",email:"amerfx@gmail.com",flight:"VW522",route:"KUL → DPS",departure:"2026-12-12",travelClass:"First",amount:1490,status:"Cancelled"},
+ {id:"VW-1005",name:"Rifa Basheerah",email:"rfsheerah6@gmail.com",flight:"VW204",route:"KUL → SIN",departure:"2026-12-15",travelClass:"Economy",amount:289,status:"Pending"},
+ {id:"VW-1006",name:"Nuriyah Aziz",email:"nuriyah35@gmail.com",flight:"VW701",route:"KUL → LHR",departure:"2026-12-18",travelClass:"Business",amount:4250,status:"Confirmed"}
 ];
 // COMMON HELPERS: Small functions reused by different pages.
 const $ = (id) => document.getElementById(id);
@@ -41,7 +41,7 @@ function getBookings(){
   const data=JSON.parse(localStorage.getItem(STORAGE_KEY));
   if(!Array.isArray(data)) return sampleBookings;
   // SAMPLE DATA UPDATE: Rename the six original sample passengers without changing their booking details.
-  const previousSampleNames={"Aisha Rahman":"Safia Amalin","Daniel Lim":"Izwan Hakimi","Nur Iman":"Faiz Iskandar","Harith Zain":"Amer Faiz","Mei Chen":"Rifa Basheerah","Sofia Ahmad":"Nuriyah Aziz"};
+  const passengerUpdates={"Safia Amalin":"sfamalin.rahman@gmail.com","Izwan Hakimi":"izwanhakimi5@gmail.com","Faiz Iskandar":"faiziskndr@gmail.com","Amer Faiz":"amerfx@gmail.com","Rifa Basheerah":"rfsheerah6@gmail.com","Nuriyah Aziz":"nuriyah35@gmail.com"};
   let changed=false;
   const updated=data.map(item=>{
    if(previousSampleNames[item.name]){changed=true;return {...item,name:previousSampleNames[item.name]};}
