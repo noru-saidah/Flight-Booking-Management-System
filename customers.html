@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Passengers | FlyMe</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+</head><body class="app-body">
+<aside class="sidebar" id="sidebar">
+  <a class="brand sidebar-brand" href="dashboard.html"><span class="brand-icon">✦</span> Fly<span>Me</span></a>
+  <div class="side-label">WORKSPACE</div>
+  <nav class="side-nav">
+    <a href="dashboard.html" data-nav="dashboard"><span>▦</span> Dashboard</a>
+    <a href="bookings.html" data-nav="bookings"><span>▤</span> Flight bookings</a>
+    <a href="customers.html" data-nav="customers"><span>♙</span> Passengers</a>
+    <a href="calendar.html" data-nav="calendar"><span>▦</span> Booking calendar</a>
+  </nav>
+  <div class="sidebar-bottom"><div class="help-card"><span>✧</span><strong>Travel made organised</strong><small>Manage every reservation in one place.</small></div><button class="logout-btn" id="logoutBtn">↪ &nbsp; Sign out</button></div>
+</aside>
+<div class="app-main"><header class="topbar">
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+  <div><span class="topbar-kicker">FLIGHT MANAGEMENT</span><strong id="pageTitle">Dashboard</strong></div>
+  <div class="topbar-user"><div class="avatar" data-user-avatar>A</div><div><strong data-current-username>Administrator</strong><small>System manager</small></div></div>
+</header>
+<main class="content-wrap">
+<div class="page-heading"><div><p class="eyebrow">PASSENGER DIRECTORY</p><h1>Passengers</h1><p class="muted">A central view of customers associated with flight reservations.</p></div><span class="soft-pill" id="customerTotal">0 passengers</span></div>
+<section class="panel"><div class="toolbar"><div class="search-box">⌕ <input id="customerSearch" placeholder="Search passenger or email…" aria-label="Search passengers"></div><span class="muted small">Passenger records are created from bookings.</span></div>
+<div class="table-responsive"><table class="table align-middle"><thead><tr><th>Passenger</th><th>Email address</th><th>Total bookings</th><th>Confirmed</th><th>Latest departure</th></tr></thead><tbody id="customerRows"></tbody></table></div>
+</section>
+<div class="info-strip mt-4"><span>✧</span><div><strong>Passenger data management</strong><p>Passenger records are automatically compiled from the booking list. Edit a passenger's details through the relevant booking record.</p></div></div>
+</main>
+<footer class="app-footer"><span>© 2026 FlyMe · IMS566 Project Prototype</span><span>Thoughtful journeys, organised simply.</span></footer>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+<script src="assets/js/app.js"></script>
+
+</body></html>
